@@ -72,6 +72,8 @@ namespace WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            app.ConfigureCustomExceptionMiddleware();
+
             app.UseCors(builder=>builder.WithOrigins("http://localhost:54086", "http://localhost:42000", "http://localhost:55164").AllowAnyHeader().AllowAnyOrigin());
             app.UseHttpsRedirection();
 
